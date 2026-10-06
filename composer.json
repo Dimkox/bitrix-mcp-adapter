@@ -1,0 +1,23 @@
+{
+    "name": "dimkox/bitrix-mcp-adapter",
+    "description": "MCP (Model Context Protocol) adapter module for 1C-Bitrix: exposes site abilities as MCP tools, resources and prompts for AI agents",
+    "type": "bitrix-module",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dimkox\\Mcp\\": "dimkox.mcp/lib/",
+            "Dimkox\\Mcp\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "php tests/run.php",
+        "lint": "find dimkox.mcp tests -name '*.php' -print0 | xargs -0 -n1 php -l"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
